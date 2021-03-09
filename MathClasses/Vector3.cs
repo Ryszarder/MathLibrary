@@ -84,5 +84,22 @@ namespace MathClasses
 			}
 
 		}
+
+		//f = V.Dot( V )
+		public float Dot(Vector3 rhs)
+		{
+			return (x * rhs.x) + (y * rhs.y) + (z * rhs.z);
+		}
+
+		//V = V.Cross( V )
+		public Vector3 Cross(Vector3 rhs)
+		{
+			Vector3 result;
+			result.x = (y * rhs.z) - (z * rhs.y);
+			result.y = (z * rhs.x) - (x * rhs.z);
+			result.z = (x * rhs.y) - (y * rhs.x);
+
+			return result;
+		}
 	}
 }
