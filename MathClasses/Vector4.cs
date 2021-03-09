@@ -79,7 +79,7 @@ namespace MathClasses
 		}
 
 		//Normalise()
-		public void Normalise()
+		public void Normalize()
 		{
 			float magnitude = Magnitude();
 			if (magnitude != 0)
