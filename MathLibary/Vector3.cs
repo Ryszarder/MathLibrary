@@ -1,60 +1,66 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace MathLibary
 {
-	public struct Vector2
+	public struct Vector3
 	{
 		public float x;
 		public float y;
+		public float z;
 
 		//Constructors
-		public Vector2(float x = 0.0f, float y = 0.0f)
+		public Vector3(float x = 0.0f, float y = 0.0f, float z = 0.0f)
 		{
 			this.x = x;
 			this.y = y;
+			this.z = z;
 		}
 
 		//Operator overloading
 		//V = V + V (point translated by a vector)
-		public static Vector2 operator + (Vector2 lhs, Vector2 rhs)
+		public static Vector3 operator + (Vector3 lhs, Vector3 rhs)
 		{
-			Vector2 result;
+			Vector3 result;
 			result.x = lhs.x + rhs.x;
 			result.y = lhs.y + rhs.y;
+			result.z = lhs.z + rhs.z;
 
 			return result;
 		}
 
 		//V = V – V(point translated by a vector)
-		public static Vector2 operator - (Vector2 lhs, Vector2 rhs)
+		public static Vector3 operator - (Vector3 lhs, Vector3 rhs)
 		{
-			Vector2 result;
+			Vector3 result;
 			result.x = lhs.x - rhs.x;
 			result.y = lhs.y - rhs.y;
+			result.z = lhs.z - rhs.z;
 
 			return result;
 		}
 
 		//V = V x f (vector scale)
-		public static Vector2 operator * (Vector2 lhs, float rhs)
+		public static Vector3 operator * (Vector3 lhs, float rhs)
 		{
-			Vector2 result;
+			Vector3 result;
 			result.x = lhs.x * rhs;
 			result.y = lhs.y * rhs;
+			result.z = lhs.z * rhs;
 
 			return result;
 		}
 
 		//V = f x V (vector scale)
-		public static Vector2 operator * (float lhs, Vector2 rhs)
+		public static Vector3 operator * (float lhs, Vector3 rhs)
 		{
-			Vector2 result;
+			Vector3 result;
 			result.x = lhs * rhs.x;
 			result.y = lhs * rhs.y;
+			result.z = lhs * rhs.z;
 
 			return result;
 		}
 	}
-
-	
 }
