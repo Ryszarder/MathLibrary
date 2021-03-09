@@ -59,7 +59,7 @@ namespace MathClasses
 			return result;
 		}
 
-
+		//V = f x V (vector scale)
 		public static Vector4 operator * (float lhs, Vector4 rhs)
 		{
 			Vector4 result;
