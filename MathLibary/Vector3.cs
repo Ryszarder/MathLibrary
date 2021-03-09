@@ -62,5 +62,25 @@ namespace MathLibary
 
 			return result;
 		}
+
+		//f = V.Magnitude()
+		public float Magnitude()
+		{
+			//c^2 = sqrt(a^2 + b^2)
+			return (float)Math.Sqrt((x * x) + (y * y) + (z * z));
+		}
+
+		//Normalise()
+		public void Normalise()
+		{
+			float magnitude = Magnitude();
+			if (magnitude != 0)
+			{
+				x /= magnitude;
+				y /= magnitude;
+				z /= magnitude;
+			}
+
+		}
 	}
 }
