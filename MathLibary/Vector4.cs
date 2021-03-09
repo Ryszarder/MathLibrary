@@ -89,5 +89,23 @@ namespace MathLibary
 			}
 
 		}
+
+		//f = V.Dot( V )
+		public float Dot(Vector4 rhs)
+		{
+			return (x * rhs.x) + (y * rhs.y) + (z * rhs.z) + (w * rhs.w);
+		}
+
+		//V = V.Cross( V )
+		public Vector4 Cross(Vector4 rhs)
+		{
+			Vector4 result;
+			result.x = (y * rhs.z) - (z * rhs.y);
+			result.y = (z * rhs.x) - (x * rhs.z);
+			result.z = (x * rhs.y) - (y * rhs.x);
+			result.w = 0;
+
+			return result;
+		}
 	}
 }

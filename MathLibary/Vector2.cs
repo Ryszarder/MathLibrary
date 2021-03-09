@@ -72,6 +72,42 @@ namespace MathLibary
 			}
 
 		}
+
+		//f = V.Dot( V )
+		public float Dot(Vector2 rhs)
+		{
+			return (x * rhs.x) + (y * rhs.y);
+		}
+
+		//Angle Direction
+		public Vector2 GetRigthAngle()
+		{
+			Vector2 result;
+			result.x = -y;
+			result.y = x;
+
+			return result;
+		}
+
+		//angle Direction
+		public static float GetRightBetween(Vector2 lhs, Vector2 rhs)
+		{
+			//Get the dot product of our two vectors
+			lhs.Normalise();
+			rhs.Normalise();
+			float fDot = lhs.Dot(rhs);
+
+			//Get angle
+			float angle = (float)Math.Acos(fDot);
+
+			//Check which angle is clockwise or anticlockwise
+			Vector2 rightangle = lhs.GetRigthAngle();
+			float fRightDot = rhs.Dot(rightangle);
+			if (fRightDot < 0)
+				angle = angle * -1.0f;
+
+			return angle;
+		}
 	}
 
 	
