@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathClasses
 {
-	struct Matrix4
+	public struct Matrix4
 	{
 		public float[] m;
 
