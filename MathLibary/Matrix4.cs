@@ -132,6 +132,14 @@ namespace MathLibary
 			m[15] = 1;
 		}
 
+		public void SetTranslation(Vector4 pos)
+		{
+			m[12] = pos.x;
+			m[13] = pos.y;
+			m[14] = pos.z;
+			m[15] = 1;
+		}
+
 		public void SetScale(float x, float y, float z, float w)
 		{
 			m[0] = x; m[4] = 0; m[8] = 0; m[12] = 0;
@@ -139,6 +147,14 @@ namespace MathLibary
 			m[2] = 0; m[6] = 0; m[10] = z; m[14] = 0;
 			m[3] = 0; m[7] = 0; m[11] = 0; m[15] = w;
 		}
-		
+
+		public void SetScale(Vector4 scale)
+		{
+			m[0] = scale.x; m[4] = 0; m[8] = 0; m[12] = 0;
+			m[1] = 0; m[5] = scale.y; m[9] = 0; m[13] = 0;
+			m[2] = 0; m[6] = 0; m[10] = scale.z; m[14] = 0;
+			m[3] = 0; m[7] = 0; m[11] = 0; m[15] = scale.w;
+		}
+
 	}
 }
