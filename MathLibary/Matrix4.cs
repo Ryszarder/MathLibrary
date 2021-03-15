@@ -95,5 +95,29 @@ namespace MathLibary
 
 			return result;
 		}
+
+		public void SetRotateX(float fRadians)
+		{
+			m[5] = (float)Math.Cos(fRadians);
+			m[6] = (float)-Math.Sin(fRadians);
+			m[9] = (float)Math.Sin(fRadians);
+			m[10] = (float)Math.Cos(fRadians);
+		}
+
+		public void SetRotateY(float fRadians)
+		{
+			m[0] = (float)Math.Cos(fRadians);
+			m[2] = (float)Math.Sin(fRadians);
+			m[8] = (float)-Math.Sin(fRadians);
+			m[10] = (float)Math.Cos(fRadians);
+		}
+
+		public void SetRotateZ(float fRadians)
+		{
+			m[0] = (float)Math.Cos(fRadians);
+			m[1] = (float)-Math.Sin(fRadians);
+			m[4] = (float)Math.Sin(fRadians);
+			m[5] = (float)Math.Cos(fRadians);
+		}
 	}
 }
