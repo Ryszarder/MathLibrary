@@ -90,7 +90,7 @@ namespace MathClasses
 			m[8] = (float)Math.Cos(fRadians);
 		}
 
-		//setRotateZ(f )
+		//setRotateZ( f )
 		public void SetRotateZ(float fRadians)
 		{
 			m[0] = (float)Math.Cos(fRadians);
