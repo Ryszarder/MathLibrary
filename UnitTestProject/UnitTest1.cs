@@ -369,7 +369,7 @@ namespace UnitTestProject
 			// homogeneous point translation
 			Matrix3 m3c = new Matrix3();
 			m3c.SetRotateZ(2.2f);
-			m3c.m7 = 55; m3c.m8 = 44; m3c.m9 = 1;
+			m3c.m[6] = 55; m3c.m[7] = 44; m3c.m[8] = 1;
 
 			Vector3 v3a = new Vector3(13.5f, -48.23f, 1);
 
@@ -399,7 +399,7 @@ namespace UnitTestProject
 			// homogeneous point translation
 			Matrix4 m4c = new Matrix4();
 			m4c.SetRotateZ(2.2f);
-			m4c.m13 = 55; m4c.m14 = 44; m4c.m15 = 99; m4c.m16 = 1;
+			m4c.m[12] = 55; m4c.m[13] = 44; m4c.m[14] = 99; m4c.m[15] = 1;
 
 			Vector4 v4a = new Vector4(13.5f, -48.23f, -54, 1);
 
@@ -428,7 +428,7 @@ namespace UnitTestProject
 			// homogeneous point translation
 			Matrix3 m3c = new Matrix3();
 			m3c.SetRotateZ(2.2f);
-			m3c.m7 = 55; m3c.m8 = 44; m3c.m9 = 1;
+			m3c.m[6] = 55; m3c.m[7] = 44; m3c.m[8] = 1;
 
 			Vector3 v3a = new Vector3(13.5f, -48.23f, 0);
 
@@ -458,7 +458,7 @@ namespace UnitTestProject
 			// homogeneous point translation
 			Matrix4 m4c = new Matrix4();
 			m4c.SetRotateZ(2.2f);
-			m4c.m13 = 55; m4c.m14 = 44; m4c.m15 = 99; m4c.m16 = 1;
+			m4c.m[12] = 55; m4c.m[13] = 44; m4c.m[14] = 99; m4c.m[15] = 1;
 
 			Vector4 v4a = new Vector4(13.5f, -48.23f, -54, 0);
 
