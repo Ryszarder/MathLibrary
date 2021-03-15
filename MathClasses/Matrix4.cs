@@ -98,6 +98,7 @@ namespace MathClasses
 			return result;
 		}
 
+		//setRotateX( f )
 		public void SetRotateX(float fRadians)
 		{
 			m[5] = (float)Math.Cos(fRadians);
@@ -105,7 +106,7 @@ namespace MathClasses
 			m[9] = (float)Math.Sin(fRadians);
 			m[10] = (float)Math.Cos(fRadians);
 		}
-
+		//setRotateY( f )
 		public void SetRotateY(float fRadians)
 		{
 			m[0] = (float)Math.Cos(fRadians);
@@ -114,6 +115,7 @@ namespace MathClasses
 			m[10] = (float)Math.Cos(fRadians);
 		}
 
+		//setRotateZ( f )
 		public void SetRotateZ(float fRadians)
 		{
 			m[0] = (float)Math.Cos(fRadians);

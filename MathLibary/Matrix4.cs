@@ -96,6 +96,7 @@ namespace MathLibary
 			return result;
 		}
 
+		//setRotateX( f )
 		public void SetRotateX(float fRadians)
 		{
 			m[5] = (float)Math.Cos(fRadians);
@@ -104,6 +105,7 @@ namespace MathLibary
 			m[10] = (float)Math.Cos(fRadians);
 		}
 
+		//setRotateY( f )
 		public void SetRotateY(float fRadians)
 		{
 			m[0] = (float)Math.Cos(fRadians);
@@ -112,6 +114,7 @@ namespace MathLibary
 			m[10] = (float)Math.Cos(fRadians);
 		}
 
+		//setRotateZ( f )
 		public void SetRotateZ(float fRadians)
 		{
 			m[0] = (float)Math.Cos(fRadians);
