@@ -131,5 +131,14 @@ namespace MathLibary
 			m[14] = z;
 			m[15] = 1;
 		}
+
+		public void SetScale(float x, float y, float z, float w)
+		{
+			m[0] = x; m[4] = 0; m[8] = 0; m[12] = 0;
+			m[1] = 0; m[5] = y; m[9] = 0; m[13] = 0;
+			m[2] = 0; m[6] = 0; m[10] = z; m[14] = 0;
+			m[3] = 0; m[7] = 0; m[11] = 0; m[15] = w;
+		}
+		
 	}
 }

@@ -103,5 +103,12 @@ namespace MathLibary
 			m[7] = y;
 			m[8] = 1;
 		}
+
+		public void SetScale(float x, float y, float z)
+		{
+			m[0] = x; m[3] = 0; m[6] = 0;
+			m[1] = 0; m[4] = y; m[7] = 0;
+			m[2] = 0; m[5] = 0; m[8] = z;
+		}
 	}
 }
