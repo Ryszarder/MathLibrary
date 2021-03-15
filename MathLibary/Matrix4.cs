@@ -55,6 +55,7 @@ namespace MathLibary
 			m[15] = m15;
 		}
 
+		//V = M x V (vector transformation)
 		public static Vector4 operator *(Matrix4 lhs, Vector4 rhs)
 		{
 			Vector4 result;
@@ -67,6 +68,7 @@ namespace MathLibary
 			return result;
 		}
 
+		//M = M x M (matrix concatenation)
 		public static Matrix4 operator *(Matrix4 lhs, Matrix4 rhs)
 		{
 			Matrix4 result = new Matrix4();

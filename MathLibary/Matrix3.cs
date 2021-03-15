@@ -38,6 +38,7 @@ namespace MathLibary
 			m[8] = m8;
 		}
 
+		//V = M x V (vector transformation)
 		public static Vector3 operator*(Matrix3 lhs, Vector3 rhs)
 		{
 			Vector3 result;
@@ -49,6 +50,7 @@ namespace MathLibary
 			return result;
 		}
 
+		//M = M x M (matrix concatenation)
 		public static Matrix3 operator *(Matrix3 lhs, Matrix3 rhs)
 		{
 			Matrix3 result = new Matrix3();
