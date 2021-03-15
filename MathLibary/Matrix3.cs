@@ -97,5 +97,11 @@ namespace MathLibary
 			m[4] = (float)Math.Cos(fRadians);
 		}
 
+		public void SetTranslation(float x, float y)
+		{
+			m[6] = x;
+			m[7] = y;
+			m[8] = 1;
+		}
 	}
 }

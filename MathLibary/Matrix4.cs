@@ -122,5 +122,14 @@ namespace MathLibary
 			m[4] = (float)Math.Sin(fRadians);
 			m[5] = (float)Math.Cos(fRadians);
 		}
+
+
+		public void SetTranslation(float x, float y, float z)
+		{
+			m[12] = x;
+			m[13] = y;
+			m[14] = z;
+			m[15] = 1;
+		}
 	}
 }
