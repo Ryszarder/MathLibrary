@@ -10,6 +10,11 @@ namespace MathClasses
 	{
 		public uint colour = 0;
 
+		public Colour()
+		{
+
+		}
+
 		public Colour(byte red, byte green, byte blue, byte alpha)
 		{
 			//0x00000000
