@@ -99,30 +99,26 @@ namespace MathLibary
 
 		public void SetTranslation(float x, float y)
 		{
-			m[0] = 0f; m[3] = 0f; m[6] = x;
-			m[1] = 0f; m[4] = 0f; m[7] = y;
-			m[2] = 0f; m[5] = 0f; m[8] = 1f;
+			m[6] = x;
+			m[7] = y;	
 		}
 
 		public void SetTranslation(Vector3 pos)
 		{
 			m[6] = pos.x;
 			m[7] = pos.y;
-			m[8] = 1f;
 		}
 
-		public void SetScale(float x, float y, float z)
+		public void SetScale(float x, float y)
 		{
-			m[0] = x;  m[3] = 0f; m[6] = 0f;
-			m[1] = 0f; m[4] = y;  m[7] = 0f;
-			m[2] = 0f; m[5] = 0f; m[8] = z;
+			m[0] = x;
+			m[4] = y;  
 		}
 
 		public void SetScale(Vector3 scale)
 		{
 			m[0] = scale.x;
 			m[4] = scale.y;
-			m[8] = scale.z;
 		}
 	}
 }
