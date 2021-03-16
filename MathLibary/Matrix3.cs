@@ -11,15 +11,15 @@ namespace MathLibary
 		public Matrix3(bool bDefault = true)
 		{
 			m = new float[9];
-			m[0] = 1;
-			m[1] = 0;
-			m[2] = 0;
-			m[3] = 0;
-			m[4] = 1;
-			m[5] = 0;
-			m[6] = 0;
-			m[7] = 0;
-			m[8] = 1;
+			m[0] = 1f;
+			m[1] = 0f;
+			m[2] = 0f;
+			m[3] = 0f;
+			m[4] = 1f;
+			m[5] = 0f;
+			m[6] = 0f;
+			m[7] = 0f;
+			m[8] = 1f;
 		}
 
 		public Matrix3(float m0, float m1, float m2, 
@@ -99,30 +99,30 @@ namespace MathLibary
 
 		public void SetTranslation(float x, float y)
 		{
-			m[6] = x;
-			m[7] = y;
-			m[8] = 1;
+			m[0] = 0f; m[3] = 0f; m[6] = 0f;
+			m[1] = 0f; m[4] = 0f; m[7] = 0f;
+			m[2] = x;  m[5] = y;  m[8] = 1f;
 		}
 
 		public void SetTranslation(Vector3 pos)
 		{
-			m[6] = pos.x;
-			m[7] = pos.y;
-			m[8] = 1;
+			m[2] = pos.x;
+			m[5] = pos.y;
+			m[8] = 1f;
 		}
 
 		public void SetScale(float x, float y, float z)
 		{
-			m[0] = x; m[3] = 0; m[6] = 0;
-			m[1] = 0; m[4] = y; m[7] = 0;
-			m[2] = 0; m[5] = 0; m[8] = z;
+			m[0] = x;  m[3] = 0f; m[6] = 0f;
+			m[1] = 0f; m[4] = y;  m[7] = 0f;
+			m[2] = 0f; m[5] = 0f; m[8] = z;
 		}
 
 		public void SetScale(Vector3 scale)
 		{
-			m[0] = scale.x; m[3] = 0; m[6] = 0;
-			m[1] = 0; m[4] = scale.y; m[7] = 0;
-			m[2] = 0; m[5] = 0; m[8] = scale.z;
+			m[0] = scale.x;
+			m[4] = scale.y;
+			m[8] = scale.z;
 		}
 	}
 }

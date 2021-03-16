@@ -11,22 +11,22 @@ namespace MathLibary
 		public Matrix4(bool bDefault = true)
 		{
 			m = new float[16];
-			m[0] = 1;
-			m[1] = 0;
-			m[2] = 0;
-			m[3] = 0;
-			m[4] = 0;
-			m[5] = 1;
-			m[6] = 0;
-			m[7] = 0;
-			m[8] = 0;
-			m[9] = 0;
-			m[10] = 1;
-			m[11] = 0;
-			m[12] = 0;
-			m[13] = 0;
-			m[14] = 0;
-			m[15] = 1;
+			m[0] = 1f;
+			m[1] = 0f;
+			m[2] = 0f;
+			m[3] = 0f;
+			m[4] = 0f;
+			m[5] = 1f;
+			m[6] = 0f;
+			m[7] = 0f;
+			m[8] = 0f;
+			m[9] = 0f;
+			m[10] = 1f;
+			m[11] = 0f;
+			m[12] = 0f;
+			m[13] = 0f;
+			m[14] = 0f;
+			m[15] = 1f;
 		}
 
 		public Matrix4(float m0, float m1, float m2,
@@ -126,34 +126,34 @@ namespace MathLibary
 
 		public void SetTranslation(float x, float y, float z)
 		{
-			m[12] = x;
-			m[13] = y;
-			m[14] = z;
-			m[15] = 1;
+			m[0] = 0f; m[4] = 0f; m[8] = 0f;  m[12] = 0f;
+			m[1] = 0f; m[5] = 0f; m[9] = 0f;  m[13] = 0f;
+			m[2] = 0f; m[6] = 0f; m[10] = 0f; m[14] = 0f;
+			m[3] = x;  m[7] = y;  m[11] = z;  m[15] = 1f;
 		}
 
 		public void SetTranslation(Vector4 pos)
 		{
-			m[12] = pos.x;
-			m[13] = pos.y;
-			m[14] = pos.z;
-			m[15] = 1;
+			m[3] = pos.x;
+			m[7] = pos.y;
+			m[11] = pos.z;
+			m[15] = 1f;
 		}
 
 		public void SetScale(float x, float y, float z, float w)
 		{
-			m[0] = x; m[4] = 0; m[8] = 0; m[12] = 0;
-			m[1] = 0; m[5] = y; m[9] = 0; m[13] = 0;
-			m[2] = 0; m[6] = 0; m[10] = z; m[14] = 0;
-			m[3] = 0; m[7] = 0; m[11] = 0; m[15] = w;
+			m[0] = x;  m[4] = 0f; m[8] = 0f;  m[12] = 0f;
+			m[1] = 0f; m[5] = y;  m[9] = 0f;  m[13] = 0f;
+			m[2] = 0f; m[6] = 0f; m[10] = z;  m[14] = 0f;
+			m[3] = 0f; m[7] = 0f; m[11] = 0f; m[15] = w;
 		}
 
 		public void SetScale(Vector4 scale)
 		{
-			m[0] = scale.x; m[4] = 0; m[8] = 0; m[12] = 0;
-			m[1] = 0; m[5] = scale.y; m[9] = 0; m[13] = 0;
-			m[2] = 0; m[6] = 0; m[10] = scale.z; m[14] = 0;
-			m[3] = 0; m[7] = 0; m[11] = 0; m[15] = scale.w;
+			m[0] = scale.x;
+			m[5] = scale.y;
+			m[10] = scale.z;
+			m[15] = scale.w;
 		}
 
 	}
