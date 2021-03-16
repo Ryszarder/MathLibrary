@@ -30,7 +30,7 @@ namespace MathLibary
 			return result;
 		}
 
-		//V = V – V(point translated by a vector)
+		//V = V – V (point translated by a vector)
 		public static Vector3 operator - (Vector3 lhs, Vector3 rhs)
 		{
 			Vector3 result;

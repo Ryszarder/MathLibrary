@@ -98,7 +98,7 @@ namespace MathClasses
 			return result;
 		}
 
-		//setRotateX( f )
+		//SetRotateX( f )
 		public void SetRotateX(float fRadians)
 		{
 			m[5] = (float)Math.Cos(fRadians);
@@ -106,7 +106,7 @@ namespace MathClasses
 			m[9] = (float)Math.Sin(fRadians);
 			m[10] = (float)Math.Cos(fRadians);
 		}
-		//setRotateY( f )
+		//SetRotateY( f )
 		public void SetRotateY(float fRadians)
 		{
 			m[0] = (float)Math.Cos(fRadians);
@@ -115,13 +115,45 @@ namespace MathClasses
 			m[10] = (float)Math.Cos(fRadians);
 		}
 
-		//setRotateZ( f )
+		//SetRotateZ( f )
 		public void SetRotateZ(float fRadians)
 		{
 			m[0] = (float)Math.Cos(fRadians);
 			m[1] = (float)-Math.Sin(fRadians);
 			m[4] = (float)Math.Sin(fRadians);
 			m[5] = (float)Math.Cos(fRadians);
+		}
+
+		//SetTranslation( f )
+		public void SetTranslation(float x, float y, float z)
+		{
+			m[12] = x;
+			m[13] = y;
+			m[14] = z;
+		}
+
+		//SetTranslation( V )
+		public void SetTranslation(Vector4 pos)
+		{
+			m[12] = pos.x;
+			m[13] = pos.y;
+			m[14] = pos.z;
+		}
+
+		//SetScale( f )
+		public void SetScale(float x, float y, float z)
+		{
+			m[0] = x;
+			m[5] = y;
+			m[10] = z;
+		}
+
+		//SetScale( V )
+		public void SetScale(Vector4 scale)
+		{
+			m[0] = scale.x;
+			m[5] = scale.y;
+			m[10] = scale.z;
 		}
 	}
 }

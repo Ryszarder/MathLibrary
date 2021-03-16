@@ -97,24 +97,28 @@ namespace MathLibary
 			m[4] = (float)Math.Cos(fRadians);
 		}
 
+		//SetTranslation( f )
 		public void SetTranslation(float x, float y)
 		{
 			m[6] = x;
 			m[7] = y;	
 		}
 
+		//SetTranslation( V )
 		public void SetTranslation(Vector3 pos)
 		{
 			m[6] = pos.x;
 			m[7] = pos.y;
 		}
 
+		//SetScale( f )
 		public void SetScale(float x, float y)
 		{
 			m[0] = x;
 			m[4] = y;  
 		}
 
+		//SetScale( V )
 		public void SetScale(Vector3 scale)
 		{
 			m[0] = scale.x;

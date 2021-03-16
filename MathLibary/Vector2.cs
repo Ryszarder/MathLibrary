@@ -25,7 +25,7 @@ namespace MathLibary
 			return result;
 		}
 
-		//V = V – V(point translated by a vector)
+		//V = V – V (point translated by a vector)
 		public static Vector2 operator - (Vector2 lhs, Vector2 rhs)
 		{
 			Vector2 result;
