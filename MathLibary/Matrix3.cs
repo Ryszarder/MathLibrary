@@ -99,15 +99,15 @@ namespace MathLibary
 
 		public void SetTranslation(float x, float y)
 		{
-			m[0] = 0f; m[3] = 0f; m[6] = 0f;
-			m[1] = 0f; m[4] = 0f; m[7] = 0f;
-			m[2] = x;  m[5] = y;  m[8] = 1f;
+			m[0] = 0f; m[3] = 0f; m[6] = x;
+			m[1] = 0f; m[4] = 0f; m[7] = y;
+			m[2] = 0f; m[5] = 0f; m[8] = 1f;
 		}
 
 		public void SetTranslation(Vector3 pos)
 		{
-			m[2] = pos.x;
-			m[5] = pos.y;
+			m[6] = pos.x;
+			m[7] = pos.y;
 			m[8] = 1f;
 		}
 
