@@ -135,7 +135,7 @@ namespace MathLibary
 		{
 			m[12] = pos.x;
 			m[13] = pos.y;
-			m[13] = pos.z;
+			m[14] = pos.z;
 		}
 
 		public void SetScale(float x, float y, float z)
