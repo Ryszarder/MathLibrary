@@ -10,7 +10,7 @@ namespace MathClasses
     {
 		public float m1, m2, m3, m4, m5, m6, m7, m8, m9;
 
-		public Matrix3(bool bDefault = true)
+		public Matrix3(bool bDefault)
         {
             m1 = 1; m2 = 0;	m3 = 0;
 			m4 = 0;	m5 = 1;	m6 = 0;
@@ -54,20 +54,30 @@ namespace MathClasses
 			result.m2 = (lhs.m2 * rhs.m1) + (lhs.m5 * rhs.m2) + (lhs.m8 * rhs.m3);
 			result.m3 = (lhs.m3 * rhs.m1) + (lhs.m6 * rhs.m2) + (lhs.m9 * rhs.m3);
 
-			result.m4 = (lhs.m4 * rhs.m4) + (lhs.m4 * rhs.m5) + (lhs.m7 * rhs.m6);
-			result.m5 = (lhs.m5 * rhs.m4) + (lhs.m5 * rhs.m5) + (lhs.m8 * rhs.m6);
-			result.m6 = (lhs.m6 * rhs.m4) + (lhs.m6 * rhs.m5) + (lhs.m9 * rhs.m6);
+			result.m4 = (lhs.m1 * rhs.m4) + (lhs.m4 * rhs.m5) + (lhs.m7 * rhs.m6);
+			result.m5 = (lhs.m2 * rhs.m4) + (lhs.m5 * rhs.m5) + (lhs.m8 * rhs.m6);
+			result.m6 = (lhs.m3 * rhs.m4) + (lhs.m6 * rhs.m5) + (lhs.m9 * rhs.m6);
 
-			result.m7 = (lhs.m7 * rhs.m7) + (lhs.m4 * rhs.m8) + (lhs.m7 * rhs.m9);
-			result.m8 = (lhs.m8 * rhs.m7) + (lhs.m5 * rhs.m8) + (lhs.m8 * rhs.m9);
-			result.m9 = (lhs.m9 * rhs.m7) + (lhs.m6 * rhs.m8) + (lhs.m9 * rhs.m9);
+			result.m7 = (lhs.m1 * rhs.m7) + (lhs.m4 * rhs.m8) + (lhs.m7 * rhs.m9);
+			result.m8 = (lhs.m2 * rhs.m7) + (lhs.m5 * rhs.m8) + (lhs.m8 * rhs.m9);
+			result.m9 = (lhs.m3 * rhs.m7) + (lhs.m6 * rhs.m8) + (lhs.m9 * rhs.m9);
 
 			return result;
+		}
+
+		//set the vaule of the floats
+		public void Identity()
+		{
+			m1 = 1; m2 = 0; m3 = 0;
+			m4 = 0; m5 = 1; m6 = 0;
+			m7 = 0; m8 = 0; m9 = 1;
 		}
 
 		//SetRotateX( f )
 		public void SetRotateX(float fRadians)
 		{
+			Identity();
+
 			m5 = (float)Math.Cos(fRadians);
 			m6 = (float)Math.Sin(fRadians);
 			m8 = (float)-Math.Sin(fRadians);
@@ -77,6 +87,8 @@ namespace MathClasses
 		//SetRotateY( f )
 		public void SetRotateY(float fRadians)
 		{
+			Identity();
+
 			m1 = (float)Math.Cos(fRadians);
 			m3 = (float)-Math.Sin(fRadians);
 			m7 = (float)Math.Sin(fRadians);
@@ -86,6 +98,8 @@ namespace MathClasses
 		//SetRotateZ( f )
 		public void SetRotateZ(float fRadians)
 		{
+			Identity();
+
 			m1 = (float)Math.Cos(fRadians);
 			m2 = (float)Math.Sin(fRadians);
 			m4 = (float)-Math.Sin(fRadians);
