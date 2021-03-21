@@ -44,12 +44,12 @@ namespace MathClasses
 		public void SetBlue(byte blue)
 		{
 			colour = colour & 0x0000FF00;
-			colour = colour | (uint)(blue << 24);
+			colour = colour | (uint)(blue << 8);
 		}
 
 		public byte GetBlue()
 		{
-			return (byte)(colour >> 24);
+			return (byte)(colour >> 8);
 		}
 
 		//Alpha
