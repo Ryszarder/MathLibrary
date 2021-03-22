@@ -24,7 +24,7 @@ namespace MathClasses
 		//Red
 		public void SetRed(byte red)
 		{
-			colour = colour & 0xFF000000;
+			colour = colour & 0x00FFFFFF;
 			colour = colour | (uint)(red << 24);
 		}
 
@@ -36,7 +36,7 @@ namespace MathClasses
 		//Green
 		public void SetGreen(byte green)
 		{
-			colour = colour & 0x00FF0000;
+			colour = colour & 0xFF00FFFF;
 			colour = colour | (uint)(green << 16);
 		}
 
@@ -48,7 +48,7 @@ namespace MathClasses
 		//Blue
 		public void SetBlue(byte blue)
 		{
-			colour = colour & 0x0000FF00;
+			colour = colour & 0xFFFF00FF;
 			colour = colour | (uint)(blue << 8);
 		}
 
@@ -60,7 +60,7 @@ namespace MathClasses
 		//Alpha
 		public void SetAlpha(byte Alpha)
 		{
-			colour = colour & 0x000000FF;
+			colour = colour & 0xFFFFFF00;
 			colour = colour | (uint)(Alpha);
 		}
 
