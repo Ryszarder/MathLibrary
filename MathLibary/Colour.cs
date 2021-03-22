@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MathClasses
 {
-	class Colour
+	public class Colour
 	{
 		private uint colour = 0;
 
