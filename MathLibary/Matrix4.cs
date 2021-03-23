@@ -130,8 +130,10 @@ namespace MathClasses
 		}
 
 		//SetTranslation( V )
-		public void SetTranslation(Vector4 pos)
+		public void SetTranslation(Vector3 pos)
 		{
+			Identity();
+
 			m13 = pos.x;
 			m14 = pos.y;
 			m15 = pos.z;
@@ -146,7 +148,7 @@ namespace MathClasses
 		}
 
 		//SetScale( V )
-		public void SetScale(Vector4 scale)
+		public void SetScale(Vector3 scale)
 		{
 			m1  = scale.x;
 			m6  = scale.y;
