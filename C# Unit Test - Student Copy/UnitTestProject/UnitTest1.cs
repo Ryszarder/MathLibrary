@@ -511,8 +511,9 @@ namespace UnitTestProject
 
             Assert.AreEqual<byte>(c.GetAlpha(), 0x78);
         }
-        
-        [TestMethod]
+
+
+		[TestMethod]
         public void ColourSetRed()
         {
             // homogeneous point translation
@@ -553,5 +554,15 @@ namespace UnitTestProject
         }
 
 		//Add it here
-    }
+
+		[TestMethod]
+		public void ColourSetN_Green()
+		{
+			// homogeneous point translation
+			Colour c = new Colour();
+			c.SetGreen(0x94);
+
+			Assert.AreEqual<UInt32>(c.colour, 0x00940000);
+		}
+	}
 }
